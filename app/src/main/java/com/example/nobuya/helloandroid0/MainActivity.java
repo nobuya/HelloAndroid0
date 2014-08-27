@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
-// import android.widget.Toast;
+import android.widget.Toast;
 import android.widget.Button;
 
 
@@ -16,12 +16,20 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Button button = (Button) findViewById(R.id.to_second);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
+            }
+        });
+        Button button2 = (Button) findViewById(R.id.click_me);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "clicked!!", Toast.LENGTH_LONG).show();
             }
         });
     }

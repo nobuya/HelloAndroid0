@@ -72,11 +72,11 @@ public class MainActivity extends Activity {
         popupWindow = new PopupWindow(MainActivity.this);
         View popupView = getLayoutInflater().inflate(R.layout.popup_layout, null);
         popupView.findViewById(R.id.close_button).setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if (popupWindow.isShowing())
-                   popupWindow.dismiss();
-           }
+            @Override
+            public void onClick(View v) {
+                if (popupWindow.isShowing())
+                    popupWindow.dismiss();
+            }
         });
         popupWindow.setContentView(popupView);
         // background
